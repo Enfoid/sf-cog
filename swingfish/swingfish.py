@@ -32,7 +32,7 @@ class SwingFish(BaseCog):
         self.role_investor = "Investor"
         self.role_slowpoke = "SlowPoke"
         self.role_addict = "505419585122467860"
-        self.role_prop = "592334797595213825"
+        self.role_prop = "440806300641918977"
         self.role_wallstreet = "WallStreet"
         self.role_crypro = "Crypto"
         self.role_quant = "Quant"
