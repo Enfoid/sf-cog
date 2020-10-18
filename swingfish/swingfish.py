@@ -544,7 +544,7 @@ class SwingFish(BaseCog):
                 if enfdata['propstatus'] == 'Evaluation' or \
                         enfdata['propstatus'] == 'Verification' or \
                         enfdata['propstatus'] == 'Live':
-                    role = discord.utils.get(user.guild.roles, name="EnFoid Gang")
+                    role = discord.utils.get(user.guild.get_role(440806300641918977))
                     await user.add_roles(role)
                     # data.add_field(name="Prop Trader Stats", value="Capital: "+str(enfdata['propbalance'])+" USD\nStatus: "+str(enfdata['propstatus'])+" [[see Statistics]("+str(enfdata['proplink'])+")]", inline=True)
                     data.add_field(
