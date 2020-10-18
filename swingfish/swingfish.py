@@ -499,8 +499,8 @@ class SwingFish(BaseCog):
         roles = [x.name for x in user.roles if x.name != "@everyone" and x.name != "."]
 
         joined_at = self.fetch_joined_at(user, guild)
-        since_created = (ctx.message.timestamp - user.created_at).days
-        since_joined = (ctx.message.timestamp - joined_at).days
+        since_created = (ctx.message.created_at - user.created_at).days
+        since_joined = (ctx.message.created_at - joined_at).days
         member_number = sorted(guild.members, key=lambda m: m.joined_at).index(user) + 1
 
         created_on = f"{since_created} days"
