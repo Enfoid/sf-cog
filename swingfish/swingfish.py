@@ -508,12 +508,10 @@ class SwingFish(BaseCog):
 
         game = "Chilling in {user.status} status"
 
-        if user.game is None:
-            pass
-        elif user.game.url is None:
-            game = f"Playing {user.game}"
-        else:
-            game = f"Streaming: [{user.game}]({user.game.url})"
+        if isinstance(user.activity, discord.Game):
+            game = f"Playing {user.activity.name}"
+        elif isinstance(user.activity, discord.Streaming):
+            game = f"Streaming: [{user.activity.game}]({user.activity.url})"
 
         if roles:
             roles = sorted(roles, key=[x.name for x in guild.role_hierarchy if x.name != "@everyone"].index)
