@@ -513,8 +513,7 @@ class SwingFish(BaseCog):
         elif isinstance(user.activity, discord.Streaming):
             game = f"Streaming: [{user.activity.game}]({user.activity.url})"
 
-        if roles:
-            roles = sorted(roles, key=[x.name for x in guild.role_hierarchy if x.name != "@everyone"].index)
+        if len(roles) > 0:
             roles = ", ".join(roles)
         else:
             roles = "None"
