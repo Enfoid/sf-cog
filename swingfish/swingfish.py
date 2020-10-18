@@ -530,7 +530,7 @@ class SwingFish(BaseCog):
         r = requests.get("http://enfoid.com/inc/ajax/lenderstats.php?uid=" + str(user.id))
         enfdata = r.json()
         if enfdata:
-            role = discord.utils.get(user.server.roles, name="EnFoid Member")
+            role = discord.utils.get(user.guild.roles, name="EnFoid Member")
             await user.add_roles(role)
             data.add_field(
                 name="EnFoid Lender Stats",
