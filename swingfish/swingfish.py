@@ -78,7 +78,7 @@ class SwingFish(BaseCog):
             data = {}
 
         data[role.id] = a
-        with open(f'~/discord_members_{role_id}.json') as f:
+        with open(f'/tmp/discord_members_{role_id}.json') as f:
             json.dump(data, f)
 
     @commands.command()
