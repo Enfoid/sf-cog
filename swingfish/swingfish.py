@@ -32,7 +32,7 @@ class SwingFish(BaseCog):
         self.role_investor = "Investor"
         self.role_slowpoke = "SlowPoke"
         self.role_addict = "505419585122467860"
-        self.role_prop = "592334797595213825"
+        self.role_prop = "440806300641918977"
         self.role_wallstreet = "WallStreet"
         self.role_crypro = "Crypto"
         self.role_quant = "Quant"
@@ -443,7 +443,7 @@ class SwingFish(BaseCog):
                     count_ad += 1
                 if role.name == "WallStreet":
                     count_ws += 1
-                if role.name == "EnFoid Prop-Trader":
+                if role.name == "EnFoid Gang":
                     count_pt += 1
 
         list_mods = guild.owner.name
@@ -530,7 +530,7 @@ class SwingFish(BaseCog):
         r = requests.get("http://enfoid.com/inc/ajax/lenderstats.php?uid=" + str(user.id))
         enfdata = r.json()
         if enfdata:
-            role = discord.utils.get(user.guild.roles, name="EnFoid Gang")
+            role = user.guild.get_role(440806300641918977)
             await user.add_roles(role)
             data.add_field(
                 name="EnFoid Lender Stats",
@@ -544,7 +544,7 @@ class SwingFish(BaseCog):
                 if enfdata['propstatus'] == 'Evaluation' or \
                         enfdata['propstatus'] == 'Verification' or \
                         enfdata['propstatus'] == 'Live':
-                    role = discord.utils.get(user.guild.roles, name="EnFoid Prop-Trader")
+                    role = user.guild.get_role(440806300641918977)
                     await user.add_roles(role)
                     # data.add_field(name="Prop Trader Stats", value="Capital: "+str(enfdata['propbalance'])+" USD\nStatus: "+str(enfdata['propstatus'])+" [[see Statistics]("+str(enfdata['proplink'])+")]", inline=True)
                     data.add_field(
