@@ -47,16 +47,16 @@ class SwingFish(BaseCog):
     @commands.command()
     @checks.admin_or_permissions(kick_members=True)
     async def webaccess(self, ctx: Context):
-        self._update_users("292344451295215616")  # cabincrew
-        self._update_users("459701647489105943")  # firstmate
-        self._update_users("440806300641918977")  # enfoid
-        self._update_users("592334797595213825")  # prop
-        self._update_users("368615195343585310")  # addicts
-        self._update_users("368741515750801409")  # Investor
-        self._update_users("368615284203847681")  #  Slowpoke
-        self._update_users("418734714527023129")  #  Rookie
-        self._update_users("510711778263564288")  # branagain
-        self._update_users("366635489383677953")  # fanboy
+        self._update_users(292344451295215616)  # cabincrew
+        self._update_users(459701647489105943)  # firstmate
+        self._update_users(440806300641918977)  # enfoid
+        self._update_users(592334797595213825)  # prop
+        self._update_users(368615195343585310)  # addicts
+        self._update_users(368741515750801409)  # Investor
+        self._update_users(368615284203847681)  #  Slowpoke
+        self._update_users(418734714527023129)  #  Rookie
+        self._update_users(510711778263564288)  # branagain
+        self._update_users(366635489383677953)  # fanboy
         await ctx.send("Updating Permissions for Web access.")
 
     def _update_users(self, role_id):
