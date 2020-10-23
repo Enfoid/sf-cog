@@ -79,7 +79,7 @@ class SwingFish(BaseCog):
 
         data[role.id] = a
 #        with open(f'/var/www/swingfish.trade/html/assets/cache/discord_members_{role_id}.json', 'w') as f:
-        with open(f'/tmp/discord_members_{role_id}.json', 'w') as f:
+        with open(f'discord_members_{role_id}.json', 'w') as f:
             json.dump(data, f)
 
     @commands.command()
