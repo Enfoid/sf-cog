@@ -530,17 +530,21 @@ class SwingFish(BaseCog):
         r = requests.get("http://enfoid.com/inc/ajax/lenderstats.php?uid=" + str(user.id))
         enfdata = r.json()
         if enfdata:
-            role = user.guild.get_role(440806300641918977)
-            await user.add_roles(role)
-            data.add_field(
-                name="EnFoid Lender Stats",
-                value=f"{enfdata['gain']}% Absolute Gain\n"
+            if enfdata['cycles'] > 0:
+                role = user.guild.get_role(440806300641918977)
+                await user.add_roles(role)
+                data.add_field(
+                    name="EnFoid Lender Stats",
+                    value=f"{enfdata['gain']}% Absolute Gain\n"
                       f"in {enfdata['cycles']} Weeks [[what is this?](https://www.enfoid.com/investors/dv?r=discord)]",
-                inline=True
-            )
+                    inline=True
+                )
             #            data.add_field(name="Lender Gain", value=str(enfdata['gain'])+"%", inline=True)
 
             if enfdata['propstatus']:
+                if enfdata['propstatus'] == 'Live':
+                    role = user.guild.get_role(752105907621593098)
+                    await user.add_roles(role)
                 if enfdata['propstatus'] == 'Evaluation' or \
                         enfdata['propstatus'] == 'Verification' or \
                         enfdata['propstatus'] == 'Live':
