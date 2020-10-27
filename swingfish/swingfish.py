@@ -545,6 +545,9 @@ class SwingFish(BaseCog):
                 if enfdata['propstatus'] == 'Live':
                     role = user.guild.get_role(752105907621593098)
                     await user.add_roles(role)
+                else:
+                    role = user.guild.get_role(752105907621593098)
+                    await user.remove_roles(role)
                 if enfdata['propstatus'] == 'Evaluation' or \
                         enfdata['propstatus'] == 'Verification' or \
                         enfdata['propstatus'] == 'Live':
@@ -562,6 +565,10 @@ class SwingFish(BaseCog):
         #                    role = discord.utils.get(user.server.roles, name="EnFoid Prop-Trader")
         #                    await self.bot.remove_roles(user, role)
 
+        else:
+            role = user.guild.get_role(752105907621593098)
+            await user.remove_roles(role)
+                           
         if user.avatar_url:
             data.set_author(name=name, url=user.avatar_url)
             data.set_thumbnail(url=user.avatar_url)
