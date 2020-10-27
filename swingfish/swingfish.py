@@ -541,6 +541,10 @@ class SwingFish(BaseCog):
                 )
             #            data.add_field(name="Lender Gain", value=str(enfdata['gain'])+"%", inline=True)
 
+            else:
+                role = user.guild.get_role(440806300641918977)
+                await user.remove_roles(role)
+                           
             if enfdata['propstatus']:
                 if enfdata['propstatus'] == 'Live':
                     role = user.guild.get_role(752105907621593098)
