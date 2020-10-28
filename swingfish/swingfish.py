@@ -12,7 +12,6 @@ from redbot.core.commands import commands, Context
 
 BaseCog = getattr(commands, "Cog", object)
 
-
 class SwingFish(BaseCog):
     """SwingFish Server Commands"""
 
