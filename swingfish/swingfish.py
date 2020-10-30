@@ -55,8 +55,8 @@ class SwingFish(BaseCog):
         self._update_users(368615284203847681)  #  Slowpoke
         self._update_users(418734714527023129)  #  Rookie
         self._update_users(510711778263564288)  # branagain
-        self._update_users(492623184957407243)  # fanboy/alcoholic
-        self._update_users(510359728392503307)  # 8 ball (for prop access)
+#        self._update_users(492623184957407243)  # fanboy/alcoholic
+#        self._update_users(510359728392503307)  # 8 ball (for prop access)
 await ctx.send("Updating Permissions for Web access.")
 
     def _update_users(self, role_id):
