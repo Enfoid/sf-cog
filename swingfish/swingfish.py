@@ -57,7 +57,7 @@ class SwingFish(BaseCog):
         self._update_users(510711778263564288)  # branagain
 #        self._update_users(492623184957407243)  # fanboy/alcoholic
 #        self._update_users(510359728392503307)  # 8 ball (for prop access)
-await ctx.send("Updating Permissions for Web access.")
+        await ctx.send("Updating Permissions for Web access.")
 
     def _update_users(self, role_id):
         guild: discord.Guild = self.bot.get_guild(self.guild_id)
