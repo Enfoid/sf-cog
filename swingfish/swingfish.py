@@ -608,9 +608,9 @@ class SwingFish(BaseCog):
 
     @commands.command()
     @guild_only()
-    async def div(self, ctx, timeframe: int = 1):
+    async def div(self, ctx, timeframe: int = 6):
         """Shows Currency Divergences
-        default 1 hour
+        default 6 hours
         timeframe 1, 4, 6, 12, 36, 96, 1050"""
 
         updated_at = ("shortly")
