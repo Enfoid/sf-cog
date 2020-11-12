@@ -546,7 +546,8 @@ class SwingFish(BaseCog):
                 await user.remove_roles(role)
                            
             if enfdata['propstatus']:
-                if enfdata['propstatus'] == 'Live':
+                if enfdata['propstatus'] == 'Live' or \
+                        enfdata['proplive'] == 'true':
                     role = user.guild.get_role(752105907621593098)
                     await user.add_roles(role)
                 else:
