@@ -44,7 +44,6 @@ class SwingFish(BaseCog):
             return user.joined_at
 
     @commands.command()
-    @checks.admin_or_permissions(kick_members=True)
     async def webaccess(self, ctx: Context):
         self._update_users(292344451295215616)  # cabincrew
         self._update_users(459701647489105943)  # firstmate
