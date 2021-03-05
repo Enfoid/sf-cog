@@ -442,7 +442,7 @@ class SwingFish(BaseCog):
                     count_ad += 1
                 if role.name == "WallStreet":
                     count_ws += 1
-                if role.name == "EnFoid Gang":
+                if role.name == "EnFoid Family":
                     count_pt += 1
 
         list_mods = guild.owner.name
