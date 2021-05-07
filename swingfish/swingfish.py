@@ -566,6 +566,12 @@ class SwingFish(BaseCog):
                                   f"Status: {enfdata['propstatus']} [[Metrics]({enfdata['proplink']})]",
                             inline=True
                         )
+                    else:
+                        data.add_field(
+                            name="Prop Trader",
+                            value=f"Status: {enfdata['propstatus']}",
+                            inline=True
+                        )
         #                    data.add_field(name="Lender Gain", value=str(enfdata['gain'])+"%", inline=True)
         #                else:
         #                    role = discord.utils.get(user.server.roles, name="EnFoid Prop-Trader")
