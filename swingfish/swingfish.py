@@ -562,8 +562,7 @@ class SwingFish(BaseCog):
                    if enfdata['gain'] > 0:
                        data.add_field(
                             name="Prop Trader Stats",
-                            value=f"Capital: {enfdata['propbalance']} USD\n"
-                                  f"Status: {enfdata['propstatus']} [[Metrics]({enfdata['proplink']})]",
+                            value=f"Status: {enfdata['propstatus']} [[Metrics]({enfdata['proplink']})]",
                             inline=True
                         )
         #                    data.add_field(name="Lender Gain", value=str(enfdata['gain'])+"%", inline=True)
