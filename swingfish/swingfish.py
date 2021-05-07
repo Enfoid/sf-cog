@@ -532,13 +532,14 @@ class SwingFish(BaseCog):
             if enfdata['cycles'] > 0:
                 role = user.guild.get_role(440806300641918977)
                 await user.add_roles(role)
-                data.add_field(
-                    name="EnFoid Lender Stats",
-                    value=f"{enfdata['gain']}% Absolute Gain\n"
-                      f"in {enfdata['cycles']} Weeks [[what is this?](https://www.enfoid.com/investors/dv?r=discord)]",
-                    inline=True
-                )
-            #            data.add_field(name="Lender Gain", value=str(enfdata['gain'])+"%", inline=True)
+                if enfdata['gain'] != "":
+                    data.add_field(
+                        name="EnFoid Lender Stats",
+                        value=f"{enfdata['gain']}% Absolute Gain\n"
+                          f"in {enfdata['cycles']} Weeks [[what is this?](https://www.enfoid.com/investors/dv?r=discord)]",
+                        inline=True
+                    )
+            #       data.add_field(name="Lender Gain", value=str(enfdata['gain'])+"%", inline=True)
 
             else:
                 role = user.guild.get_role(440806300641918977)
