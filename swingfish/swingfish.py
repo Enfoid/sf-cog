@@ -559,8 +559,8 @@ class SwingFish(BaseCog):
                     role = user.guild.get_role(440806300641918977)
                     await user.add_roles(role)
                     # data.add_field(name="Prop Trader Stats", value="Capital: "+str(enfdata['propbalance'])+" USD\nStatus: "+str(enfdata['propstatus'])+" [[see Statistics]("+str(enfdata['proplink'])+")]", inline=True)
-                    if enfdata['cycles'] > 0:
-                        data.add_field(
+                   if enfdata['gain'] > 0:
+                       data.add_field(
                             name="Prop Trader Stats",
                             value=f"Capital: {enfdata['propbalance']} USD\n"
                                   f"Status: {enfdata['propstatus']} [[Metrics]({enfdata['proplink']})]",
