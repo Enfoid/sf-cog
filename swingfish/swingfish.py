@@ -81,7 +81,7 @@ class SwingFish(BaseCog):
             json.dump(data, f)
 
 	@commands.command(pass_context=True)
-	async def stat(ctx):
+	async def csvstat(ctx):
     	"""Returns a CSV file of all users on the server."""
 		await bot.request_offline_members(ctx.message.server)
 		before = time.time()
